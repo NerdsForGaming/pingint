@@ -1,30 +1,12 @@
 {
-  "name": "ping",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "ping": "^0.4.4"
-  },
+  "name": "vercel-ping-server",
+  "version": "1.0.0",
+  "description": "Server for handling ping requests using the ping library",
+  "main": "index.js", // Assuming your entry file is named index.js
   "scripts": {
-    "start": "node ping.js",
-    "build": "npm i",
+    "start": "node index.js" // Adjust the start command based on your entry file name
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "ping": "^0.4.4" // Replace with the appropriate version of the ping library
   }
 }
