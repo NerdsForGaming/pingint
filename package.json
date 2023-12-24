@@ -2,11 +2,11 @@
   "name": "pingint",
   "version": "1.0.0",
   "description": "Server for handling ping requests using the ping library",
-  "main": "ping.js", // Assuming your entry file is named index.js
+  "main": "ping.js",
   "scripts": {
-    "start": "node ping.js" // Adjust the start command based on your entry file name
+    "start": "node ping.js"
   },
   "dependencies": {
-    "ping": "^0.4.4" // Replace with the appropriate version of the ping library
+    "ping": "^0.4.4"
   }
 }
