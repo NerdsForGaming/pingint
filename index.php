@@ -6,8 +6,15 @@ require __DIR__ . '/vendor/autoload.php';
 
 $app = AppFactory::create();
 
-$app->get('/ping/{ip}', function ($request, $response, $args) {
-    $ip = $args['ip'];
+$app->get('/ping', function ($request, $response, $args) {
+    $ip = $request->getQueryParam('ip');
+    if (!$ip || !filter_var($ip, FILTER_VALIDATE_IP)) {
+        $data = [
+            'error' => 'Invalid IP address provided'
+        ];
+        return $response->withJson($data, 400); // Bad Request
+    }
+
     $pingResult = getPing($ip);
 
     $data = [
